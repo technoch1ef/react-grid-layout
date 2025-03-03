@@ -9,6 +9,7 @@ import {
   cloneLayoutItem,
   compact,
   compactType,
+  createDragApiRef,
   fastRGLPropsEqual,
   getAllCollisions,
   getLayoutItem,
@@ -103,7 +104,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     verticalCompact: true,
     compactType: "vertical",
     preventCollision: false,
-    dragApiRef: React.createRef<DragApiRefObject>(),
+    dragApiRef: createDragApiRef(),
     droppingItem: {
       i: "__dropping-elem__",
       h: 1,
